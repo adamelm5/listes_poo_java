@@ -1,9 +1,9 @@
-TEST = test
+SOURCES = src/SimpleList.java
+TEST = test/SimpleListTest.java
 
 all:
-	javac src/*.java
-	mkdir build
-	mv *.class build
+	javac -d build src/SimpleList.java test/SimpleListTest.java
+	java -cp build SimpleListTest
 
 clean:
 	rm -rf build
